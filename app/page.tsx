@@ -58,10 +58,10 @@ export default function Home() {
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
   
   const typedText = useTypewriter([
-    "Full Stack Developer",
-    "Problem Solver", 
-    "Tech Enthusiast",
-    "Quick Learner"
+    "AI/ML Developer",
+    "Data Scientist", 
+    "Deep Learning Enthusiast",
+    "Problem Solver"
   ]);
 
   return (
@@ -161,7 +161,7 @@ export default function Home() {
                 variants={fadeInUp}
                 className="text-gray-500 leading-relaxed max-w-xl mb-8"
               >
-                Passionate about building responsive web applications and solving complex problems with clean, efficient code. Currently pursuing B.Tech in Computer Science at LPU.
+                Passionate about building intelligent systems and solving complex problems with machine learning and deep learning. Currently pursuing B.Tech in Computer Science at LPU.
               </motion.p>
               
               <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
@@ -249,12 +249,12 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { title: "Languages", skills: ["Python", "C++", "Java", "DSA"], color: "emerald" },
-              { title: "Frontend", skills: ["HTML", "CSS", "JavaScript"], color: "teal" },
-              { title: "Backend", skills: ["Python", "Node.js", "Express.js"], color: "cyan" },
-              { title: "Tools", skills: ["Git", "SQLite", "Linux", "Arduino"], color: "emerald" },
-              { title: "Currently Learning", skills: ["React", "MongoDB", "Next.js"], color: "teal" },
-              { title: "Soft Skills", skills: ["Leadership", "Event Management", "Adaptability"], color: "cyan" }
+              { title: "Languages", skills: ["Python", "C++", "SQL", "R"], color: "emerald" },
+              { title: "ML/DL Frameworks", skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Keras"], color: "teal" },
+              { title: "Data Science", skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn"], color: "cyan" },
+              { title: "Tools", skills: ["Git", "Jupyter", "Docker", "Linux"], color: "emerald" },
+              { title: "AI/ML Domains", skills: ["NLP", "Computer Vision", "LLMs", "MLOps"], color: "teal" },
+              { title: "Soft Skills", skills: ["Research", "Problem Solving", "Collaboration"], color: "cyan" }
             ].map((category, index) => (
               <motion.div
                 key={category.title}
@@ -545,69 +545,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* Currently Learning Section */}
-        <motion.section
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={staggerContainer}
-          className="mb-20"
-        >
-          <motion.div variants={fadeInUp} className="flex items-center gap-4 mb-10">
-            <h2 className="text-3xl font-bold">Currently Working On</h2>
-            <div className="flex-1 h-px bg-gradient-to-r from-white/20 to-transparent" />
-          </motion.div>
-          
-          <motion.div 
-            variants={fadeInUp}
-            className="relative overflow-hidden bg-gradient-to-br from-emerald-500/5 via-teal-500/5 to-cyan-500/5 border border-white/10 rounded-3xl p-8"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px]" />
-            <div className="relative grid md:grid-cols-3 gap-6">
-              {[
-                { 
-                  icon: "🚀", 
-                  title: "React & Next.js", 
-                  desc: "Building modern web apps with server-side rendering",
-                  progress: 60
-                },
-                { 
-                  icon: "🗄️", 
-                  title: "MongoDB", 
-                  desc: "Learning NoSQL database design patterns",
-                  progress: 40
-                },
-                { 
-                  icon: "🧠", 
-                  title: "DSA Mastery", 
-                  desc: "Solving advanced algorithmic problems daily",
-                  progress: 75
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  whileHover={{ y: -5 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5"
-                >
-                  <span className="text-3xl mb-3 block">{item.icon}</span>
-                  <h3 className="font-bold text-white mb-1">{item.title}</h3>
-                  <p className="text-sm text-gray-500 mb-4">{item.desc}</p>
-                  <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
-                    <motion.div 
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${item.progress}%` }}
-                      transition={{ duration: 1, delay: index * 0.2 }}
-                      className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"
-                    />
-                  </div>
-                  <p className="text-xs text-emerald-400 mt-2">{item.progress}% complete</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </motion.section>
-
-        {/* Contact Section */}
+        {/* Contact Section */
         <motion.section
           id="contact"
           initial="initial"
@@ -633,22 +571,6 @@ export default function Home() {
                 </p>
                 
                 <div className="space-y-4">
-                  <motion.a
-                    whileHover={{ x: 5 }}
-                    href="mailto:bhavanishankar@example.com"
-                    className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:border-emerald-500/30 transition-all group"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl flex items-center justify-center">
-                      <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Email me at</p>
-                      <p className="text-white group-hover:text-emerald-400 transition-colors">bhavanishankar@example.com</p>
-                    </div>
-                  </motion.a>
-                  
                   <motion.a
                     whileHover={{ x: 5 }}
                     href="https://linkedin.com/in/bhavani-shankar-321631298/"
