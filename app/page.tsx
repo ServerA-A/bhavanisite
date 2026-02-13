@@ -545,7 +545,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* Contact Section */
+        {/* Contact Section */}
         <motion.section
           id="contact"
           initial="initial"
