@@ -214,7 +214,7 @@ export default function Home() {
             >
               {[
                 { number: "100+", label: "Problems Solved" },
-                { number: "2+", label: "Projects Built" },
+                { number: "1+", label: "Projects Built" },
                 { number: "5+", label: "Technologies" },
                 { number: "2027", label: "Graduating" }
               ].map((stat, index) => (
@@ -310,17 +310,17 @@ export default function Home() {
                 ],
                 tech: ["JavaScript", "API", "CSS"]
               },
-              {
-                title: "To-Do List App",
-                date: "May 2027 – Jun 2027",
-                description: "Interactive task management application with persistent storage",
-                features: [
-                  "localStorage for data persistence",
-                  "Responsive design with animations",
-                  "Input validation and error handling"
-                ],
-                tech: ["HTML", "CSS", "JavaScript"]
-              }
+              // {
+              //   title: "To-Do List App",
+              //   date: "May 2027 – Jun 2027",
+              //   description: "Interactive task management application with persistent storage",
+              //   features: [
+              //     "localStorage for data persistence",
+              //     "Responsive design with animations",
+              //     "Input validation and error handling"
+              //   ],
+              //   tech: ["HTML", "CSS", "JavaScript"]
+              // }
             ].map((project, index) => (
               <motion.div
                 key={project.title}
